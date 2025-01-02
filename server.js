@@ -14,6 +14,14 @@ const port = process.env.PORT||4000;
 mongoose.connect(process.env.MONGODB_CONNECTION).then(()=>{console.log("Database Connected")}).catch((err)=>{console.log(err)});
 
 
+mongoose.connect(process.env.MONGODB_CONNECTION, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
+  
+
+
+
 // middle ware
 app.set('view engine', 'ejs');
 app.use (express.static(path.join(__dirname, "assets")));//host  express static files
