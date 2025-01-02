@@ -41,7 +41,7 @@ app.use('/api/auth', authRoutes)
 
 
 app.get('/',(req,res)=>{
-    res.render('404')
+    res.render('index')
 });
 app.get('/404',(req,res)=>{
     res.render('404')
